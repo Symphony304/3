@@ -1,0 +1,85 @@
+.menu {
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #dddddd;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Alineamos el texto del menú a la izquierda */
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #853ebe;
+    font-size: 18px;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #d49fff;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.text-content {
+    width: 100%; /* Ocupa todo el ancho del contenedor principal */
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los recuadros se ajusten en múltiples filas si es necesario */
+    gap: 20px; /* Espacio entre los recuadros */
+}
+
+.box, .boxa, .boxb {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px; /* Ajusta el margen inferior para separar los recuadros */
+    width: 100%; /* Ajustamos el ancho del recuadro para que sea responsivo */
+    max-width: 300px; /* Establecemos un máximo ancho para que no sea demasiado grande en pantallas grandes */
+    color: #fff; /* Cambia el color del texto para que sea visible sobre el fondo degradado */
+}
+
+.box {
+    background: linear-gradient(135deg, #6e45e2, #bcaae5);
+}
+
+.boxa {
+    background: linear-gradient(135deg, #7f36c4, #f5ad26);
+}
+
+.boxb {
+    background: linear-gradient(135deg, #8425ff, #e5aad8);
+}
+
+.box h2, .boxa h2, .boxb h2 {
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.box p, .boxa p, .boxb p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.box ul, .boxa ul, .boxb ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.box ul li, .boxa ul li, .boxb ul li {
+    margin-bottom: 10px;
+}

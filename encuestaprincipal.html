@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Sencilla</title>
+    <link rel="stylesheet" type="text/css" href="styleEncu.css">
+    <link rel="stylesheet" type="text/css" href="stilo.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(136, 55, 190);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Primera Encuesta</h2>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>1. ¿Cómo calificarías nuestro servicio?</label>
+                <label><input type="radio" name="servicio" value="excelente"> Excelente</label>
+                <label><input type="radio" name="servicio" value="bueno"> Bueno</label>
+                <label><input type="radio" name="servicio" value="regular"> Regular</label>
+                <label><input type="radio" name="servicio" value="malo"> Malo</label>
+            </div>
+            <div class="form-group">
+                <label>2. ¿Con qué frecuencia utilizas nuestros servicios?</label>
+                <label><input type="radio" name="frecuencia" value="diario"> Diario</label>
+                <label><input type="radio" name="frecuencia" value="semanal"> Semanal</label>
+                <label><input type="radio" name="frecuencia" value="mensual"> Mensual</label>
+                <label><input type="radio" name="frecuencia" value="ocasional"> Ocasional</label>
+            </div>
+            <div class="form-group">
+                <label for="mejorar">3. ¿Qué podemos mejorar?</label>
+                <textarea id="mejorar" name="mejorar" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>4. ¿Recomendarías nuestro servicio a otros?</label>
+                <label><input type="radio" name="recomendacion" value="si"> Sí</label>
+                <label><input type="radio" name="recomendacion" value="no"> No</label>
+            </div>
+            <div class="form-group">
+                <label for="comentarios">5. Comentarios adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+.menu {
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #dddddd;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Alineamos el texto del menú a la izquierda */
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #853ebe;
+    font-size: 18px;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #d49fff;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Ocupa todo el ancho del contenedor principal */
+}
+
+.video-container {
+    position: absolute; /* Posición absoluta para moverlo al lugar específico */
+    top: 300px; /* Ajusta la distancia desde la parte superior */
+    right: 300px; /* Ajusta la distancia desde la parte derecha */
+    width: 500px; /* Ajusta el ancho del video */
+    height: 350px; /* Ajusta la altura del video */
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.box, .boxa, .boxb {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.4);
+    margin-bottom: 50px;
+    width: 100%; /* Ajustamos el ancho del recuadro para que sea responsivo */
+    max-width: 600px; /* Establecemos un máximo ancho para que no sea demasiado grande en pantallas grandes */
+    color: #fff; /* Cambia el color del texto para que sea visible sobre el fondo degradado */
+}
+
+.box {
+    background: linear-gradient(135deg, #6e45e2, #bcaae5);
+}
+
+.boxa {
+    background: linear-gradient(135deg, #7f36c4, #f5ad26);
+}
+
+.boxb {
+    background: linear-gradient(135deg, #8425ff, #e5aad8);
+}
+
+.box h2, .boxa h2, .boxb h2 {
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.box p, .boxa p, .boxb p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text a {
+    position: absolute; /* Posicionamos el texto absolutamente dentro del contenedor del video */
+    top: -40px; /* Ajusta la distancia desde la parte superior del contenedor */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff; /* Color del texto */
+    font-family: 'Poppins', sans-serif; /* Fuente bonita para el texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.survey-button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea el enlace a la derecha */
+    padding: 20px; /* Añade espacio alrededor del enlace */
+}
+
+.survey-button {
+    background: linear-gradient(135deg, #936cfd, #ffc75e);
+    color: #ffffff; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño del texto del botón */
+    font-family: 'Poppins', sans-serif; /* Fuente del botón */
+    cursor: pointer; /* Cursor tipo mano al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+    position: absolute; /* Posición absoluta para moverlo al lugar específico */
+    top: 760px; /* Ajusta la distancia desde la parte superior */
+    right: 470px; /* Ajusta la distancia desde la parte derecha */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+    
+}
+
+.survey-button:hover {
+    background: linear-gradient(135deg, #6e60a1, #ffa200);
+        background-color: #2e254e;
+        transform: scale(1.2);
+        
+    }

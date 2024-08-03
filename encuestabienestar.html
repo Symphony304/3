@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta sobre el Bienestar Emocional</title>
+  <link rel="stylesheet" href="stylebienestar.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Encuesta sobre el Bienestar Emocional</h1>
+    <form action="submit_survey.php" method="post">
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Género:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Seleccione</option>
+          <option value="female">Femenino</option>
+          <option value="male">Masculino</option>
+          <option value="other">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>¿Con qué frecuencia haces ejercicio físico?</label>
+        <div class="options">
+          <label><input type="radio" name="exercise" value="Nunca" required>Nunca</label>
+          <label><input type="radio" name="exercise" value="Raramente" required>Raramente</label>
+          <label><input type="radio" name="exercise" value="A veces" required>A veces</label>
+          <label><input type="radio" name="exercise" value="Frecuentemente" required>Frecuentemente</label>
+          <label><input type="radio" name="exercise" value="Siempre" required>Siempre</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>¿Te sientes apoyado por tus amigos y familiares?</label>
+        <div class="options">
+          <label><input type="radio" name="support" value="Nunca" required>Nunca</label>
+          <label><input type="radio" name="support" value="Raramente" required>Raramente</label>
+          <label><input type="radio" name="support" value="A veces" required>A veces</label>
+          <label><input type="radio" name="support" value="Frecuentemente" required>Frecuentemente</label>
+          <label><input type="radio" name="support" value="Siempre" required>Siempre</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>¿Con qué frecuencia sientes satisfacción con tu vida?</label>
+        <div class="options">
+          <label><input type="radio" name="satisfaction" value="Nunca" required>Nunca</label>
+          <label><input type="radio" name="satisfaction" value="Raramente" required>Raramente</label>
+          <label><input type="radio" name="satisfaction" value="A veces" required>A veces</label>
+          <label><input type="radio" name="satisfaction" value="Frecuentemente" required>Frecuentemente</label>
+          <label><input type="radio" name="satisfaction" value="Siempre" required>Siempre</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>¿Con qué frecuencia te sientes ansioso o preocupado?</label>
+        <div class="options">
+          <label><input type="radio" name="anxiety" value="Nunca" required>Nunca</label>
+          <label><input type="radio" name="anxiety" value="Raramente" required>Raramente</label>
+          <label><input type="radio" name="anxiety" value="A veces" required>A veces</label>
+          <label><input type="radio" name="anxiety" value="Frecuentemente" required>Frecuentemente</label>
+          <label><input type="radio" name="anxiety" value="Siempre" required>Siempre</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>¿Cómo calificarías tu capacidad para manejar los problemas diarios?</label>
+        <div class="options">
+          <label><input type="radio" name="coping" value="Muy mala" required>Muy mala</label>
+          <label><input type="radio" name="coping" value="Mala" required>Mala</label>
+          <label><input type="radio" name="coping" value="Regular" required>Regular</label>
+          <label><input type="radio" name="coping" value="Buena" required>Buena</label>
+          <label><input type="radio" name="coping" value="Muy buena" required>Muy buena</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>¿Con qué frecuencia te sientes motivado para alcanzar tus metas?</label>
+        <div class="options">
+          <label><input type="radio" name="motivation" value="Nunca" required>Nunca</label>
+          <label><input type="radio" name="motivation" value="Raramente" required>Raramente</label>
+          <label><input type="radio" name="motivation" value="A veces" required>A veces</label>
+          <label><input type="radio" name="motivation" value="Frecuentemente" required>Frecuentemente</label>
+          <label><input type="radio" name="motivation" value="Siempre" required>Siempre</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comments">Comentarios adicionales:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
