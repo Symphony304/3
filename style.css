@@ -1,269 +1,132 @@
-*{
+.menu {
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #dddddd;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins' , sans-serif;
+    text-align: left; /* Alineamos el texto del menú a la izquierda */
 }
 
-:root {
-    --bg-color:#080808;
-    --second-bg-color:#131313;
-    --text-color:white;
-    --main-color:#00ffee;
+.menu li {
+    display: inline;
 }
-html{
-    font-size: 60%;
-    overflow-x: hidden;
+
+.menu li a {
+    text-decoration: none;
+    color: #853ebe;
+    font-size: 18px;
+    margin-right: 20px;
+    transition: color 0.3s;
 }
-body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
+
+.menu li a:hover {
+    color: #d49fff;
 }
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 4rem 12% 4rem;
-    background: rgba(0, 0, 0, 0.3) ;
-    backdrop-filter: blur(10px);
+
+.main-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    z-index: 5;
-}
-.logo{
-    font-size: 3rem;
-    color: var(--text-color);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.3s ease;
-
+    padding: 20px;
 }
 
-.logo:hover{
-    transform: scale(1.1);
-}
-.logo span{
-    text-shadow:  0 0 25px var(--main-color);
-}
-.navbar a{
-font-size: 1.8rem;
-color: var(--text-color);
-margin-left: 4rem;
-font-weight:500;
-transition: 0.3s ease;
-border-bottom: 3px  solid transparent;
-}
-.navbar  a:hover,
-.navbar a.active{
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
-}
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--main-color);
-    display: none;
-}
-
-section{
-    min-height: 100vh;
-    padding: 10rem 12% 10rem;
-}
-.home{
+.text-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15rem;
-}
-.home-content{
-display: flex;
-flex-direction: column;
-align-items: baseline;
-text-align: left;
-justify-content: center;
-margin-top: 3rem;
-}
-span{
-    color: var(--main-color);
-}
-.logo span{
-    color: var(--main-color);
-}
-.home-content h3{
-        margin-bottom: 2rem;
-        margin-top: 1rem;
-    font-size: 3.5rem;
-}
-.home-content h1{
-    font-size: 7rem;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    line-height: 1;
-}
-.home-img{
-    border-radius: 50%;
-}
-.home-img img{
-    position: relative;
-    top: 3rem;
-    width: 32vw;
-    border-radius: 50%;
-    box-shadow:  0  0 25px var(--main-color);
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-
-}
-.home-img img:hover{
-    box-shadow: 0 0 25px var(--main-color),
-     0 0 50px var(--main-color),
-     0 0 100px var(--main-color);
-}
-.home-content p{
-    font-size:1.5rem ;
-    font-weight: 500;
-    line-height: 1.8;
-    max-width: 1000px;
-
-}
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    background: transparent;
-    border: 2px solid var(--main-color);
-    font-size: 2.5rem;
-    border-radius: 50%;
-    color: var(--main-color);
-    margin: 3rem 1.5rem 3rem;
-    transition: 0.3s  ease-in-out;
-}
-.social-icons a:hover{
-    color: var(--text-color);
-    transform: scale(1.3) translateY(-5px) ;
-    box-shadow: 0 0 25px var(--main-color);
-    background-color: var(--main-color);
-
-}
-.btn{
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-     box-shadow: 0 0 25px var(--main-color);
-     border-radius: 4rem;
-     font-size: 1.6rem;
-     color: black;
-     border: 2px solid transparent;
-     letter-spacing: 0.1rem;
-     font-weight: 600;
-     transition: 0.3s  ease-in-out;
-     cursor: pointer;
-
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Ocupa todo el ancho del contenedor principal */
 }
 
-.btn:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 50px var(--main-color);
-}
-.btn-group{
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-.btn-group a:nth-of-type(2){
-    background-color: black;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
-
+.video-container {
+    position: absolute; /* Posición absoluta para moverlo al lugar específico */
+    top: 300px; /* Ajusta la distancia desde la parte superior */
+    right: 300px; /* Ajusta la distancia desde la parte derecha */
+    width: 500px; /* Ajusta el ancho del video */
+    height: 350px; /* Ajusta la altura del video */
 }
 
-.btn-group a:nth-of-type(2):hover{
-    box-shadow: 0 0 25px var(--main-color);
-    background-color: var(--main-color);
-    color: black;
-}
-
-.text-animation{
-    font-size: 34px ;
-    font-weight: 600;
-    min-width: 280px;
-}
-
-.text-animation span{
-    position: relative;
-}
-.text-animation span::before{
-    content: 'Web Developer';
-    color: var(--main-color);
-    animation: words 20s infinite;
-}
-.text-animation span::after{
-    content: "";
-    background-color: var(--bg-color);
-    position: absolute;
-    width: calc(100% + 80px);
+.video-container iframe {
+    width: 100%;
     height: 100%;
-    border-left: 3px solid var(--bg-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
-@keyframes cursor{
-    to{
-        border-left: 2px solid var(--main-color);
-    }
-}
-@keyframes words{
-    0%,
-    20%{
-        content: 'Frontend Web Developer';
-    }
-    21%,
-    40%{
-        content: 'App Developer';
-    }
-    41%,
-    60%{
-        content: 'UI / Ux Designer';
-    }
-    61%,
-    80%{
-        content: 'Flutter Developer';
-    }
-    81%,
-    100%{
-        content: '';
-    }
-}
-@keyframes typing{
-    10%,
-    15%,
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95%{
-        width: 0;
-    }
-    5%,
-    20%,
-    25%,
-    40%,
-    45%,
-    60%,
-    65%,
-    80%,
-    85%{
-        width: calc(100% + 8px);
-    }
+.box, .boxa, .boxb {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.4);
+    margin-bottom: 50px;
+    width: 100%; /* Ajustamos el ancho del recuadro para que sea responsivo */
+    max-width: 600px; /* Establecemos un máximo ancho para que no sea demasiado grande en pantallas grandes */
+    color: #fff; /* Cambia el color del texto para que sea visible sobre el fondo degradado */
 }
 
+.box {
+    background: linear-gradient(135deg, #6e45e2, #bcaae5);
+}
+
+.boxa {
+    background: linear-gradient(135deg, #7f36c4, #f5ad26);
+}
+
+.boxb {
+    background: linear-gradient(135deg, #8425ff, #e5aad8);
+}
+
+.box h2, .boxa h2, .boxb h2 {
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.box p, .boxa p, .boxb p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text a {
+    position: absolute; /* Posicionamos el texto absolutamente dentro del contenedor del video */
+    top: -40px; /* Ajusta la distancia desde la parte superior del contenedor */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff; /* Color del texto */
+    font-family: 'Poppins', sans-serif; /* Fuente bonita para el texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.survey-button-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea el enlace a la derecha */
+    padding: 20px; /* Añade espacio alrededor del enlace */
+}
+
+.survey-button {
+    background: linear-gradient(135deg, #936cfd, #ffc75e);
+    color: #ffffff; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño del texto del botón */
+    font-family: 'Poppins', sans-serif; /* Fuente del botón */
+    cursor: pointer; /* Cursor tipo mano al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+    position: absolute; /* Posición absoluta para moverlo al lugar específico */
+    top: 760px; /* Ajusta la distancia desde la parte superior */
+    right: 470px; /* Ajusta la distancia desde la parte derecha */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+    
+}
+
+.survey-button:hover {
+    background: linear-gradient(135deg, #6e60a1, #ffa200);
+        background-color: #2e254e;
+        transform: scale(1.2);
+        
+    }
